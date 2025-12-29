@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vishal Learning – Part 1</title>
+<title>Vishal Learning – Class 6 to 10</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body{font-family:Arial,sans-serif;background:#f4f6f8;margin:0;text-align:center}
 header{background:#0a58ca;color:#fff;padding:25px}
@@ -12,21 +13,20 @@ select,textarea{padding:10px;margin:6px;font-size:16px}
 textarea{width:90%;max-width:520px;height:120px}
 button{padding:12px 22px;font-size:16px;background:#198754;color:#fff;border:none;border-radius:5px;cursor:pointer}
 button:hover{background:#145c32;}
-#responseBox{margin-top:20px;text-align:left;max-width:700px;margin-left:auto;margin-right:auto;background:#fff;padding:15px;border-radius:6px;white-space:pre-line;}
+#responseBox{margin-top:20px;text-align:left;max-width:700px;margin:auto;background:#fff;padding:15px;border-radius:6px;white-space:pre-line;}
 footer{background:#222;color:#fff;padding:15px;margin-top:30px;}
-footer a{color:#9ecbff;text-decoration:none;margin:0 6px;}
 </style>
 </head>
+
 <body>
 
 <header>
 <h1>📘 Vishal Learning</h1>
-<p>Free Education Platform – Part 1 (Classes 6–7)</p>
+<p>Free Education Platform for Class 6–10 Students</p>
 </header>
 
 <section>
 <h2>Explain Any Topic</h2>
-<p>Select class & subject, then type topic name.</p>
 
 <select id="classSelect">
 <option>6</option>
@@ -47,7 +47,6 @@ footer a{color:#9ecbff;text-decoration:none;margin:0 6px;}
 </section>
 
 <footer>
-<p><a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
 <p>Created by Vishal Shukla | Powered by GitHub Pages</p>
 </footer>
 
@@ -56,59 +55,58 @@ const database = {
   Physics: {
     "Class 6": {
       "Motion": `Motion is the change in position of an object with time.
-Types: rectilinear, circular, periodic.
-Example: A car moving on a road (rectilinear), clock hands (circular).`,
-      "Force": `Force is a push or pull that can change motion or shape.
-Example: Pushing a door to open it.`
-    },
-    "Class 7": {
-      "Work": `Work = Force × Distance
-Example: Pushing a box 5m with 10N force → Work = 50J.`,
-      "Energy": `Energy is the capacity to do work.
-Types: kinetic, potential, thermal, etc.`
+
+Types of Motion:
+1. Rectilinear Motion – motion in a straight line.
+Example: A car moving on a straight road.
+
+2. Circular Motion – motion along a circular path.
+Example: Hands of a clock.
+
+3. Periodic Motion – motion that repeats at regular intervals.
+Example: Swinging of a pendulum.
+
+Motion helps us understand how objects move around us.`,
+      
+      "Force": `Force is a push or pull that can change the shape, speed, or direction of an object.
+Example: Kicking a football changes its motion.`
     }
   },
+
   Chemistry: {
     "Class 6": {
       "Matter": `Matter is anything that has mass and occupies space.
-States: solid, liquid, gas.`
-    },
-    "Class 7": {
-      "Atoms": `Atoms are the smallest unit of matter.
-They combine to form molecules.`
+States of matter: Solid, Liquid, Gas.`
     }
   },
+
   Math: {
     "Class 6": {
-      "Fractions": `A fraction represents part of a whole.
-Example: 1/2, 3/4`,
-      "Decimals": `Decimals are numbers with a decimal point.
-Example: 0.5, 1.25`
-    },
-    "Class 7": {
-      "Algebra": `Algebra deals with variables and expressions.
-Example: x + 5 = 10 → x = 5`,
-      "Geometry": `Geometry studies shapes, sizes, and properties.
-Example: Triangle, circle, rectangle.`
+      "Fractions": `A fraction represents a part of a whole.
+Example: 1/2, 3/4`
     }
   }
 };
 
 function explainTopic(){
-  const cls=document.getElementById("classSelect").value;
-  const sub=document.getElementById("subjectSelect").value;
-  const topic=document.getElementById("topicInput").value.trim();
-  const box=document.getElementById("responseBox");
+  const cls = document.getElementById("classSelect").value;
+  const sub = document.getElementById("subjectSelect").value;
+  const topic = document.getElementById("topicInput").value.trim();
+  const box = document.getElementById("responseBox");
 
-  if(topic===""){ box.innerText="Please type a topic name."; return; }
+  if(topic===""){
+    box.innerText="Please type a topic name.";
+    return;
+  }
 
   if(database[sub] && database[sub]["Class "+cls] && database[sub]["Class "+cls][topic]){
     box.innerText = database[sub]["Class "+cls][topic];
   } else {
-    box.innerText = "❌ Topic '"+topic+"' not added yet.\nWe will add it soon.";
+    box.innerText = "❌ Topic not added yet.";
   }
 }
 </script>
 
 </body>
 </html>
+Updated detailed explanations for Class 6 topics
