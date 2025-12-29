@@ -6,211 +6,191 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
-  font-family: Arial, sans-serif;
-  background:#f4f6f8;
-  margin:0;
-  text-align:center;
-}
-header{
-  background:#0a58ca;
-  color:#fff;
-  padding:30px 15px;
-}
-section{ padding:20px; }
-
-select, textarea{
-  padding:10px;
-  margin:6px;
-  font-size:16px;
-}
-textarea{
-  width:90%;
-  max-width:600px;
-  height:120px;
-}
-
-button{
-  padding:12px 25px;
-  font-size:16px;
-  background:#198754;
-  color:#fff;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-}
-button:hover{ background:#145c32; }
-
-/* ANSWER BOX STYLE (DIFFERENT COLOR) */
+body{font-family:Arial,sans-serif;background:#f4f6f8;margin:0;text-align:center}
+header{background:#0a58ca;color:#fff;padding:25px}
+section{padding:20px}
+select,textarea{padding:10px;margin:6px;font-size:16px}
+textarea{width:90%;max-width:520px;height:120px}
+button{padding:12px 22px;font-size:16px;background:#198754;color:#fff;border:none;border-radius:5px;cursor:pointer}
+button:hover{background:#145c32}
 #responseBox{
-  margin-top:25px;
-  max-width:750px;
-  margin-left:auto;
-  margin-right:auto;
-  background:#fff8dc;
-  border-left:6px solid #0a58ca;
-  padding:20px;
+  margin-top:20px;
+  max-width:800px;
+  margin:auto;
+  background:#d1ecf1; /* light blue for answer */
+  padding:18px;
+  border-left:6px solid #0dcaf0; /* colored border for answer */
   text-align:left;
   white-space:pre-line;
   font-size:16px;
-  color:#000;
 }
-
-footer{
-  background:#222;
-  color:#fff;
-  padding:15px;
-  margin-top:40px;
-}
-footer a{
-  color:#9ecbff;
-  text-decoration:none;
-  margin:0 6px;
-}
+footer{background:#222;color:#fff;padding:15px;margin-top:30px}
+footer a{color:#9ecbff;text-decoration:none;margin:0 6px}
 </style>
 </head>
-
 <body>
 
 <header>
-  <h1>📘 Vishal Learning</h1>
-  <p>Free Education Platform for Class 6–10 Students</p>
+<h1>📘 Vishal Learning</h1>
+<p>Class 6–10: Physics, Chemistry, Math</p>
 </header>
 
 <section>
-  <h2>Explain Any Topic</h2>
-  <p>Select class, subject and type topic name</p>
+<h2>Explain Any Topic</h2>
 
-  <select id="classSelect">
-    <option>6</option>
-    <option>7</option>
-    <option>8</option>
-    <option>9</option>
-    <option>10</option>
-  </select>
+<select id="classSelect">
+<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+</select>
 
-  <select id="subjectSelect">
-    <option>Physics</option>
-    <option>Chemistry</option>
-    <option>Math</option>
-  </select>
+<select id="subjectSelect">
+<option>Physics</option>
+<option>Chemistry</option>
+<option>Math</option>
+</select>
 
-  <br>
+<br>
+<textarea id="topicInput" placeholder="Type any topic name"></textarea><br>
+<button onclick="explainTopic()">Explain Topic</button>
 
-  <textarea id="topicInput" placeholder="Example: Motion"></textarea><br>
-  <button onclick="explainTopic()">Explain Topic</button>
-
-  <div id="responseBox"></div>
+<div id="responseBox"></div>
 </section>
 
 <footer>
-  <p>
-    <a href="about.html">About Us</a> |
-    <a href="contact.html">Contact Us</a> |
-    <a href="privacy.html">Privacy Policy</a>
-  </p>
-  <p>Created by Vishal Shukla | Powered by GitHub Pages</p>
+<p>
+<a href="about.html">About Us</a> |
+<a href="contact.html">Contact Us</a> |
+<a href="privacy.html">Privacy Policy</a>
+</p>
+<p>Created by Vishal Shukla | Powered by GitHub Pages</p>
 </footer>
 
 <script>
-/* REAL EXPLANATION DATABASE */
+// Combined database with Chemistry Class 9 Metals & Non-metals added
 const database = {
+  Physics:{
+    "Class 6":{
+      "Motion":`Motion is the change in position of an object with respect to time.
 
-  Physics: {
-    "Class 6": {
-      "Motion": `🔹 Motion (Class 6 – Physics)
+Types of Motion:
+1) Rectilinear motion – motion in a straight line
+2) Circular motion – motion in a circular path
+3) Periodic motion – motion that repeats itself
 
-Motion is the change in position of an object with time, with respect to a reference point.
+Examples:
+• Car moving on road – rectilinear
+• Clock hands – circular
+• Pendulum swing – periodic`,
 
-👉 If an object does not change its position, it is said to be at rest.
-👉 If its position changes, it is said to be in motion.
-
-📌 Types of Motion:
-
-1️⃣ Rectilinear Motion:
-Motion of an object along a straight line.
-Example:
-• A car moving on a straight road
-• A train moving on straight railway track
-
-2️⃣ Circular Motion:
-Motion of an object along a circular path.
-Example:
-• Hands of a clock
-• Rotation of a ceiling fan
-
-3️⃣ Periodic Motion:
-Motion that repeats itself at equal intervals of time.
-Example:
-• Swinging of a pendulum
-• Motion of Earth around the Sun
-
-📘 Importance:
-Understanding motion helps us study speed, distance and direction of objects around us.`,
-
-      "Force": `🔹 Force (Class 6 – Physics)
-
-Force is a push or pull applied on an object.
-
-Effects of Force:
-• Change shape of an object
-• Change speed
-• Change direction
-• Move a stationary object
+      "Force":`Force is a push or pull that can change the shape, speed or direction of an object.
 
 Example:
-• Pushing a door to open it
-• Kicking a football`
+Pushing a door to open it.`
+    },
+    "Class 7":{
+      "Work":`Work = Force × Distance.  
+Example: Pushing a box across floor.`,
+
+      "Energy":`Energy is capacity to do work.  
+Example: Food provides energy to humans.`
+    },
+    "Class 8":{
+      "Light":`Light travels in straight lines.  
+Reflection & refraction explained.  
+Example: Mirror reflection.`,
+
+      "Sound":`Sound is vibration.  
+Pitch, frequency and examples explained.`
+    },
+    "Class 9":{
+      "Laws of Motion":`Newton’s Laws of Motion:
+
+1️⃣ First Law: Object at rest/motion remains unless force acts.
+2️⃣ Second Law: F = m × a
+3️⃣ Third Law: Action = Reaction
+
+Example: Jumping off ground.`,
+
+      "Gravitation":`Gravitation: Force by which objects attract each other.  
+Formula: F = G*(m1*m2)/r²  
+Example: Objects fall to Earth.`
+    },
+    "Class 10":{
+      "Electricity":`Electricity: current, voltage, resistance.  
+Ohm’s Law: V = I × R  
+Example: Bulb glows in circuit.`,
+
+      "Magnetism":`Magnetism: force due to magnets.  
+Example: Compass needle aligns with North.`
     }
   },
 
-  Chemistry: {
-    "Class 6": {
-      "Matter": `🔹 Matter (Class 6 – Chemistry)
+  Chemistry:{
+    "Class 6":{
+      "Matter":`Matter is anything that has mass and occupies space.  
+States: Solid, Liquid, Gas  
+Example: Stone, Water, Air`
+    },
+    "Class 7":{
+      "Atoms":`Atoms are smallest units of matter.  
+Example: Hydrogen atom.`
+    },
+    "Class 8":{
+      "Chemical Reactions":`Process where substances change into new ones.  
+Example: Rusting of iron.`
+    },
+    "Class 9":{
+      "Atoms":`Atoms are smallest units of matter.  
+Example: Oxygen atom.`,
+      "Metals and Non-metals":`Metals: shiny, hard, conduct electricity.  
+Non-metals: dull, poor conductor.  
+Example: Iron, Sulphur.`
+    },
+    "Class 10":{
+      "Acids and Bases":`Acids produce H⁺, Bases produce OH⁻.  
+pH <7 Acidic, pH=7 Neutral, pH>7 Basic.  
+Example: Lemon juice, Soap.`,
 
-Matter is anything that has mass and occupies space.
-
-States of Matter:
-• Solid – fixed shape (stone)
-• Liquid – fixed volume (water)
-• Gas – no fixed shape (air)
-
-Matter is made up of very small particles called atoms and molecules.`
+      "Metals and Non-metals":`Metals: shiny, hard, conduct electricity.  
+Non-metals: dull, poor conductor.  
+Example: Iron, Sulphur.`
     }
   },
 
-  Math: {
-    "Class 6": {
-      "Fractions": `🔹 Fractions (Class 6 – Math)
-
-A fraction represents a part of a whole.
-
-Example:
-• 1/2 means one part out of two equal parts
-• 3/4 means three parts out of four equal parts
-
-Fractions are used in daily life like sharing food, money etc.`
+  Math:{
+    "Class 6":{
+      "Fractions":`Fraction represents part of whole.  
+Example: 1/2, 3/4`
+    },
+    "Class 7":{
+      "Algebra":`Algebra uses letters for numbers.  
+Example: x + 5 = 10`
+    },
+    "Class 8":{
+      "Geometry":`Geometry: shapes, angles, figures.  
+Example: Triangle, Square, Circle`
+    },
+    "Class 9":{
+      "Pythagoras Theorem":`Right-angled triangle: Hypotenuse² = Base² + Height²`
+    },
+    "Class 10":{
+      "Quadratic Equations":`Quadratic equation: ax² + bx + c = 0  
+Solved using Factorization or Formula.`
     }
   }
 };
 
 function explainTopic(){
-  const cls = document.getElementById("classSelect").value;
-  const sub = document.getElementById("subjectSelect").value;
-  const topic = document.getElementById("topicInput").value.trim();
-  const box = document.getElementById("responseBox");
+  const cls=document.getElementById("classSelect").value;
+  const sub=document.getElementById("subjectSelect").value;
+  const topic=document.getElementById("topicInput").value.trim();
+  const box=document.getElementById("responseBox");
 
-  if(topic === ""){
-    box.innerText = "❗ Please type a topic name.";
-    return;
-  }
+  if(topic===""){ box.innerText="Please type a topic."; return; }
 
   if(database[sub] && database[sub]["Class "+cls] && database[sub]["Class "+cls][topic]){
     box.innerText = database[sub]["Class "+cls][topic];
   } else {
-    box.innerText =
-      "❌ Topic not available yet.\n\n" +
-      "Please check spelling or we will add this topic soon.";
+    box.innerText = "❌ Topic not added yet. It will be added soon.";
   }
 }
 </script>
