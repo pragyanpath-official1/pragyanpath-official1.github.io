@@ -6,8 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{box-sizing:border-box;font-family:Inter,Arial}
-body{margin:0;background:#f8fafc;color:#0f172a}
+*{
+  box-sizing:border-box;
+  font-family:Inter,Arial,sans-serif;
+}
+
+body{
+  margin:0;
+  background:#0f172a;
+  color:#0f172a;
+}
 
 /* ===== LOGIN SCREEN ===== */
 .login-screen{
@@ -15,98 +23,123 @@ body{margin:0;background:#f8fafc;color:#0f172a}
   display:flex;
   justify-content:center;
   align-items:center;
-  background:linear-gradient(135deg,#0f172a,#1e293b);
+  padding:20px;
+  background:
+    radial-gradient(circle at top,#1e293b,#020617);
 }
+
 .login-box{
-  background:#fff;
   width:100%;
-  max-width:420px;
-  padding:35px;
-  border-radius:14px;
-  box-shadow:0 30px 80px rgba(0,0,0,.35);
+  max-width:520px;
+  background:#ffffff;
+  padding:50px 40px;
+  border-radius:20px;
+  box-shadow:0 40px 120px rgba(0,0,0,.5);
   text-align:center;
 }
+
+/* BIG BRANDING */
 .brand{
-  font-size:36px;
-  font-weight:800;
-  color:#1e293b;
+  font-size:46px;
+  font-weight:900;
+  letter-spacing:2px;
+  color:#020617;
 }
+
 .sub{
+  margin-top:6px;
+  font-size:15px;
   color:#64748b;
-  margin-bottom:25px;
+  margin-bottom:35px;
 }
+
 .input{
   width:100%;
-  padding:14px;
-  margin:10px 0;
-  border-radius:8px;
+  padding:17px;
+  margin:14px 0;
+  border-radius:12px;
   border:1px solid #cbd5e1;
-  font-size:15px;
+  font-size:16px;
 }
+
+.input:focus{
+  outline:none;
+  border-color:#2563eb;
+}
+
 .btn{
   width:100%;
-  padding:14px;
+  padding:17px;
+  margin-top:12px;
   border:none;
-  border-radius:8px;
+  border-radius:12px;
   background:#2563eb;
   color:#fff;
-  font-size:16px;
+  font-size:17px;
   font-weight:600;
   cursor:pointer;
 }
-.btn:hover{background:#1d4ed8}
-.link{
-  margin-top:12px;
-  font-size:14px;
-  color:#2563eb;
-  cursor:pointer;
+
+.btn:hover{
+  background:#1d4ed8;
 }
 
 /* ===== HOME ===== */
 .home{
   display:none;
   min-height:100vh;
-  padding:30px;
+  padding:40px 20px;
+  background:#f8fafc;
 }
+
 .top{
-  max-width:900px;
+  max-width:1000px;
   margin:auto;
+  text-align:center;
 }
+
 .search{
   width:100%;
-  padding:16px;
+  padding:18px;
   font-size:16px;
-  border-radius:10px;
+  border-radius:14px;
   border:1px solid #cbd5e1;
 }
+
 .explain{
-  margin-top:15px;
-  padding:14px 22px;
-  background:#0f172a;
+  margin-top:18px;
+  padding:16px 28px;
+  background:#020617;
   color:#fff;
   border:none;
-  border-radius:10px;
+  border-radius:14px;
   font-size:16px;
   cursor:pointer;
 }
+
 .classes{
-  margin-top:30px;
+  margin-top:40px;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-  gap:15px;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:20px;
 }
+
 .class-box{
-  background:#fff;
-  padding:18px;
-  border-radius:12px;
-  text-align:center;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  background:#ffffff;
+  padding:24px;
+  border-radius:18px;
+  font-weight:600;
+  box-shadow:0 15px 40px rgba(0,0,0,.1);
   cursor:pointer;
 }
-.class-box:hover{transform:translateY(-3px)}
+
+.class-box:hover{
+  transform:translateY(-6px);
+  transition:.3s;
+}
+
 footer{
-  margin-top:40px;
-  text-align:center;
+  margin-top:50px;
   color:#64748b;
   font-size:14px;
 }
@@ -115,16 +148,19 @@ footer{
 
 <body>
 
-<!-- ===== LOGIN ===== -->
+<!-- LOGIN -->
 <div class="login-screen" id="loginScreen">
   <div class="login-box">
-    <div class="brand">PRAGYANPATH</div>
-    <div class="sub">Learning Platform</div>
 
-    <input id="loginInput" class="input" placeholder="Login with Email or Mobile Number">
+    <div class="brand">PRAGYANPATH</div>
+    <div class="sub">India’s Smart Learning Platform</div>
+
+    <input id="loginInput" class="input"
+      placeholder="Login with Email or Mobile Number">
 
     <div id="passwordBox" style="display:none">
-      <input class="input" type="password" placeholder="Enter Password">
+      <input class="input" type="password"
+        placeholder="Enter Password">
     </div>
 
     <div id="otpBox" style="display:none">
@@ -133,14 +169,22 @@ footer{
 
     <button class="btn" onclick="continueLogin()">Continue</button>
 
-    <div class="link" onclick="resetLogin()">Change login method</div>
   </div>
 </div>
 
-<!-- ===== HOME ===== -->
+<!-- HOME -->
 <div class="home" id="home">
   <div class="top">
-    <input class="search" placeholder="Search any topic... (Maths, Physics, Biology)">
+
+    <h1 style="font-size:38px;font-weight:900;">
+      Welcome to PRAGYANPATH
+    </h1>
+
+    <p style="color:#64748b;margin-bottom:30px;">
+      Learn anything from Class 1 to 12 – Smartly
+    </p>
+
+    <input class="search" placeholder="Search any topic…">
     <br>
     <button class="explain">Explain Topic</button>
 
@@ -160,35 +204,29 @@ footer{
     </div>
 
     <footer>
-      © Pragyanpath | Created by Vishal Shukla
+      © Pragyanpath | Learning for Everyone
     </footer>
   </div>
 </div>
 
 <script>
 function continueLogin(){
-  let value=document.getElementById("loginInput").value.trim();
-  if(value==="") return alert("Enter email or mobile number");
+  let v=document.getElementById("loginInput").value.trim();
+  if(v==="") return alert("Enter Email or Mobile");
 
-  if(value.includes("@")){
+  if(v.includes("@")){
     document.getElementById("passwordBox").style.display="block";
     document.getElementById("otpBox").style.display="none";
   }else{
     document.getElementById("otpBox").style.display="block";
     document.getElementById("passwordBox").style.display="none";
-    alert("OTP sent (Firebase later)");
+    alert("OTP sent (demo)");
   }
 
   setTimeout(()=>{
     document.getElementById("loginScreen").style.display="none";
     document.getElementById("home").style.display="block";
   },1500);
-}
-
-function resetLogin(){
-  document.getElementById("loginInput").value="";
-  document.getElementById("passwordBox").style.display="none";
-  document.getElementById("otpBox").style.display="none";
 }
 </script>
 
