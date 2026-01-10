@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pragyanpath – Complete Education Mission</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- SEO -->
+<meta name="description" content="Pragyanpath – Complete Education App for Class 1 to 12, Competitive Exams, Skills, Life Skills & Chess Learning with ELO.">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f5f8fc;color:#222}
+
+/* Navbar */
+header{
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 40px;background:#fff;
+box-shadow:0 4px 12px rgba(0,0,0,.08)
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:20px}
+.logo img{width:40px}
+nav a{margin:0 12px;text-decoration:none;color:#333;font-weight:500}
+.signup{
+background:#f4b400;color:#fff;
+padding:8px 16px;border-radius:6px;text-decoration:none
+}
+
+/* Hero */
+.hero{
+display:flex;flex-wrap:wrap;align-items:center;
+padding:60px 40px;
+background:linear-gradient(120deg,#eaf2ff,#ffffff)
+}
+.hero-text{flex:1}
+.hero-text h1{font-size:40px;margin-bottom:15px}
+.hero-text p{font-size:18px;margin-bottom:20px;color:#555}
+.hero-text ul li{margin:8px 0}
+.hero-btns a{
+display:inline-block;margin-right:12px;
+padding:10px 20px;border-radius:6px;text-decoration:none
+}
+.primary{background:#f4b400;color:#fff}
+.secondary{border:2px solid #f4b400;color:#f4b400}
+
+/* Sections */
+.section{padding:60px 40px}
+.section h2{text-align:center;margin-bottom:40px}
+
+/* Cards */
+.cards{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px
+}
+.card{
+background:#fff;padding:25px;border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center
+}
+.card h3{margin-bottom:12px}
+.card ul{list-style:none}
+.card ul li{margin:6px 0;font-size:14px}
+.card a{
+display:inline-block;margin-top:15px;
+background:#f4b400;color:#fff;
+padding:8px 16px;border-radius:6px;text-decoration:none
+}
+
+/* Chess Section */
+.chess{
+background:#eef4ff;border-radius:18px;padding:40px;margin-top:40px
+}
+
+/* Footer */
+footer{
+background:#1f2d3d;color:#fff;
+padding:30px 40px;margin-top:60px
+}
+footer a{color:#ccc;text-decoration:none;font-size:14px}
+.footer-grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px
+}
+.copy{text-align:center;margin-top:20px;font-size:13px;color:#bbb}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<div class="logo">
+<img src="assets/images/logo.png" alt="Pragyanpath Logo">
+PRAGYANPATH
+</div>
+<nav>
+<a href="#">Home</a>
+<a href="about.html">About</a>
+<a href="#">Resources</a>
+<a href="contact.html">Contact</a>
+<a class="signup" href="#">Sign Up</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-text">
+<h1>Unlock Your Full Potential</h1>
+<p>Complete Education Mission – School + Competitive + Skills + Life</p>
+<ul>
+<li>✔ Voice-based & Animated Teachers</li>
+<li>✔ Class 1 to 12 – All Subjects</li>
+<li>✔ Skill & Chess Learning with ELO</li>
+<li>✔ Simple, Safe & Student-Friendly</li>
+</ul>
+<div class="hero-btns">
+<a href="#" class="primary">Download App</a>
+<a href="#programs" class="secondary">Learn More</a>
+</div>
+</div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="section" id="programs">
+<h2>Our Core Programs</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>School Academics</h3>
+<ul>
+<li>Class 1 to 12</li>
+<li>NCERT Based Learning</li>
+<li>Definitions, Examples</li>
+<li>Homework & Exams Help</li>
+</ul>
+<a href="#">Learn More</a>
+</div>
+
+<div class="card">
+<h3>Skills Development</h3>
+<ul>
+<li>Coding & AI Basics</li>
+<li>Digital Literacy</li>
+<li>Logical Thinking</li>
+<li>♟️ Chess with ELO System</li>
+</ul>
+<a href="#">Learn More</a>
+</div>
+
+<div class="card">
+<h3>Creative & Life Skills</h3>
+<ul>
+<li>Art & Music</li>
+<li>Public Speaking</li>
+<li>Financial Literacy</li>
+<li>Personality Growth</li>
+</ul>
+<a href="#">Learn More</a>
+</div>
+
+</div>
+
+<!-- CHESS -->
+<div class="chess">
+<h3>♟️ Chess Learning with ELO Rating</h3>
+<p>
+Pragyanpath App offers structured chess learning for beginners to advanced players.
+Students improve focus, strategy and logic while tracking progress through an ELO rating system.
+</p>
+<ul>
+<li>• Beginner to Advanced Lessons</li>
+<li>• Practice vs AI</li>
+<li>• Daily Chess Puzzles</li>
+<li>• ELO based Skill Progress</li>
+</ul>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-grid">
+<div>
+<h4>Quick Links</h4>
+<a href="about.html">About Us</a><br>
+<a href="privacy.html">Privacy Policy</a><br>
+<a href="terms.html">Terms of Service</a>
+</div>
+
+<div>
+<h4>Contact</h4>
+<a href="contact.html">Contact Us</a><br>
+<a href="mailto:contact@pragyanpath.com">Email Support</a>
+</div>
+</div>
+
+<div class="copy">
+© 2025 Pragyanpath. All Rights Reserved.
+</div>
+</footer>
+
+</body>
+  </html>
+  
