@@ -1,10 +1,11 @@
 {
   "name": "Pragyanpath",
   "short_name": "Pragyanpath",
-  "start_url": "/index.html",
+  "description": "Complete Education App: School + Competitive + Skills + Life",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0f172a",
+  "theme_color": "#f4b400",
   "icons": [
     {
       "src": "assets/images/icon-192.png",
