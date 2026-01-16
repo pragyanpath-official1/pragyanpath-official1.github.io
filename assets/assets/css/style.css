@@ -1,1 +1,17 @@
 /* Pragyanpath main CSS */
+.hero-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #facc15, #fde047);
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  max-width: 720px;
+  margin: auto;
+}
